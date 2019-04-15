@@ -46,8 +46,8 @@
                 var backboneCity = [];
                 
                 function setXAxis(xAxis){
-                    //    this.xAxis = xAxis;
-                    this.xAxis = ['00:00','00:10','00:20','00:30','00:40','00:50',
+                    //    xAxis = xAxis;
+                    xAxis = ['00:00','00:10','00:20','00:30','00:40','00:50',
                                   '01:00','01:10','01:20','01:30','01:40','01:50',
                                   '02:00','02:10','02:20','02:30','02:40','02:50',
                                   '03:00','03:10','03:20','03:30','03:40','03:50',
@@ -75,16 +75,16 @@
                                   '23:00','23:10','23:20','23:30','23:40','23:50'];
                 }
             
-            function setCenterCity(centerCity){
-                this.centerCity = centerCity;
+            function setCenterCity(newCenterCity){
+                centerCity = newCenterCity;
             }
             
-            function setBackboneCity(backboneCity){
-                this.backboneCity = backboneCity;
+            function setBackboneCity(newBackboneCity){
+                backboneCity = newBackboneCity;
             }
             
-            function setWholeCity(wholeCity){
-                this.wholeCity = wholeCity;
+            function setWholeCity(newWholeCity){
+                wholeCity = newWholeCity;
             }
             
             function update() {
@@ -118,7 +118,7 @@
                             width: 0.5
                             }
                             },
-                            data: this.xAxis
+                            data: xAxis
                             }],
                             yAxis: [{
                                     type: 'value',
@@ -192,7 +192,7 @@
                                                      }]
                                                     ]
                                              },
-                                             data: this.centerCity
+                                             data: centerCity
                                              }, {
                                              name: '全市',
                                              type: 'line',
@@ -259,7 +259,7 @@
                                                      }]
                                                     ]
                                              },
-                                             data: this.wholeCity
+                                             data: wholeCity
                                              }, {
                                              name: '全市主骨干网',
                                              type: 'line',
@@ -326,7 +326,7 @@
                                                      }]
                                                     ]
                                              },
-                                             data: this.backboneCity
+                                             data: backboneCity
                                              }]
                 };
                 var dom = document.getElementById("container");
@@ -357,7 +357,7 @@
         <div id="container" style="height: 230px;width:100%">
             
             <script>
-                <!--            this.update();-->
+                <!--            update();-->
                 </script>
         </div>
         
